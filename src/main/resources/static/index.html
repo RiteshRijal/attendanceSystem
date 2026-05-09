@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<div class="navbar">
+    <button onclick="showPage('subjectPage')">Subjects</button>
+    <button onclick="showPage('userPage')">Users</button>
+    <button onclick="showPage('attendancePage')">Attendance</button>
+</div>
+
+<!-- SUBJECT PAGE -->
+<div id="subjectPage" class="page active">
+    <h2>📚 Subjects</h2>
+
+    <input id="subjectName" placeholder="Subject Name">
+    <button onclick="addSubject()">Add Subject</button>
+
+    <ul id="subjectList"></ul>
+</div>
+
+<!-- USER PAGE -->
+<div id="userPage" class="page">
+    <h2>👤 Users</h2>
+
+    <input id="manualId" placeholder="Manual ID">
+    <input id="email" placeholder="Email">
+    <button onclick="addUser()">Add User</button>
+
+    <ul id="userList"></ul>
+</div>
+
+<!-- ATTENDANCE PAGE -->
+<div id="attendancePage" class="page">
+    <h2>📅 Attendance</h2>
+
+    <select id="subjectSelect"></select>
+    <select id="userSelect"></select>
+
+    <input type="date" id="attDate">
+
+    <label>
+        Present
+        <input type="checkbox" id="isPresent">
+    </label>
+
+    <button onclick="saveAttendance()">Save</button>
+
+    <h3>Records</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Subject</th>
+            <th>User</th>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody id="attendanceTable"></tbody>
+    </table>
+</div>
+
+<script src="javascript/app.js"></script>
+</body>
+</html>

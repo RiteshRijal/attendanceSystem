@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f6fa;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #2f3640;
+    padding: 10px;
+}
+
+.navbar button {
+    margin-right: 10px;
+    padding: 10px 15px;
+    border: none;
+    background: #44bd32;
+    color: white;
+    cursor: pointer;
+}
+
+/* PAGE */
+.page {
+    display: none;
+    padding: 20px;
+}
+
+.page.active {
+    display: block;
+}
+
+/* INPUTS */
+input, select {
+    padding: 8px;
+    margin: 5px;
+}
+
+/* BUTTON */
+button {
+    padding: 8px 12px;
+    background: #0097e6;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}

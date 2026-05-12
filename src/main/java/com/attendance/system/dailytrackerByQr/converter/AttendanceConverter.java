@@ -12,31 +12,25 @@ public class AttendanceConverter {
 
         Attendance attendance = new Attendance();
         attendance.setId(dto.getId());
-        attendance.setUser(UserConverter.toEntity(dto.getUserDto()));
-        attendance.setSubject(SubjectConverter.toEntity(dto.getSubjectDto()));
+        attendance.setUserSubjectMap(UserSubjectMapConverter.toEntity(dto.getUserSubjectMapDto()));
         attendance.setDate(dto.getDate());
         attendance.setIsPresent(dto.getIsPresent());
+        attendance.setToken(dto.getToken());
         return attendance;
     }
 
     public static AttendanceDto toDto(Attendance entity) {
 
         AttendanceDto dto = new AttendanceDto();
-
         dto.setId(entity.getId());
-
-        if (entity.getUser() != null) {
-            dto.setUserDto(UserConverter.toDto(entity.getUser() ));
+        if (entity.getUserSubjectMap() != null) {
+            dto.setUserSubjectMapDto(UserSubjectMapConverter.toDto(entity.getUserSubjectMap()));
         }
-
-        if (entity.getSubject() != null) {
-            dto.setSubjectDto(SubjectConverter.toDto(entity.getSubject()));
-        }
-
         if (entity.getDate() != null) {
             dto.setDate(entity.getDate());
         }
-
+        dto.setToken(entity.getToken());
+        dto.setIsPresent(entity.getIsPresent());
         return dto;
     }
 }

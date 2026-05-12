@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Attendance System</title>
+    <title>QR Generate</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,16 +16,18 @@
 </div>
 
 <div class="container">
-    <h1>Attendance Dashboard</h1>
-    <p>Welcome to Attendance System</p>
-    <p>Features</p>
-    <ul>
-        <li>Manual Attendance</li>
-        <li>Qr Attendance</li>
-        <li>Real Time Attendance Record</li>
-        <li>Used ORM, Springboot and can add security if required</li>
-    </ul>
+
+    <h2>Generate QR</h2>
+
+    <select id="qrSubject"></select>
+    <input type="date" id="qrDate">
+
+    <button onclick="generateQR()">Generate</button>
+
+    <img id="qrImage" width="200">
+
 </div>
 
+<script src="javascript/qr.js"></script>
 </body>
 </html>

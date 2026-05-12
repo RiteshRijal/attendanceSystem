@@ -11,27 +11,21 @@ public class AttendanceDto {
 
     private Long id;
 
-    private UserDto userDto;
+    private UserSubjectMapDto userSubjectMapDto;
 
-    private SubjectDto subjectDto;
+    private String token;
 
     private Date date;
 
     private Boolean isPresent;
 
-    public UserDto getUserDto() {
-        if (userDto == null) {
-            userDto = new UserDto();
+    public UserSubjectMapDto getUserSubjectMapDto() {
+        if (userSubjectMapDto == null) {
+            userSubjectMapDto = new UserSubjectMapDto();
         }
-        return userDto;
+        return userSubjectMapDto;
     }
 
-    public SubjectDto getSubjectDto() {
-        if (subjectDto == null) {
-            subjectDto = new SubjectDto();
-        }
-        return subjectDto;
-    }
 
 
 }

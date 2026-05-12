@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="subject.html">Subjects</a>
+    <a href="user.html">Users</a>
+    <a href="group.html">Groups</a>
+    <a href="attendance.html">Attendance</a>
+    <a href="qr.html">Generate QR</a>
+</div>
+
+<div class="container">
+
+    <h2>Attendance Management</h2>
+
+    <label>Subject</label>
+    <select id="qrSubject" onchange="onSubjectChange()"></select>
+
+    <label>Users</label>
+    <select id="userSubjectSelect"></select>
+
+    <label>Date</label>
+    <input type="date" id="attDate" onchange="loadAttendance()">
+
+    <button onclick="saveAttendance()">Save Attendance</button>
+
+    <hr>
+
+    <h3>Attendance Records</h3>
+
+    <table class="modern-table">
+
+        <thead>
+        <tr>
+            <th>SN</th>
+            <th>Subject</th>
+            <th>User</th>
+            <th>Date</th>
+        </tr>
+        </thead>
+
+        <tbody id="attendanceTable"></tbody>
+
+    </table>
+
+</div>
+
+<script src="javascript/attendance.js"></script>
+
+</body>
+</html>

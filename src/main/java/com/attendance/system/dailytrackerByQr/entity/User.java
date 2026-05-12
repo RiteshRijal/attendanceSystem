@@ -21,6 +21,4 @@ public class User extends AbstractProfile{
     @Column(name="EMAIL")
     private String email;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Attendance> attendances = new ArrayList<>();
 }

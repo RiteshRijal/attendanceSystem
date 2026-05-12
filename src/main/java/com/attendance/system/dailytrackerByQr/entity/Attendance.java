@@ -14,17 +14,16 @@ import java.util.Date;
 public class Attendance extends AbstractId {
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "USER_ID")
-    private User user;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Subject_ID")
-    private Subject subject;
+    @JoinColumn(name = "USER_SUBJECT_MAP")
+    private UserSubjectMap userSubjectMap;
 
     @Column(name="IS_PRESENT")
     private Boolean isPresent;
 
     @Column(name="DATE")
     private Date date;
+
+    @Column(name="TOKEN")
+    private String token;
 
 }

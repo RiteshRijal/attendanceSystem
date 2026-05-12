@@ -14,9 +14,10 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-@Table
+@Table(name="SUBJECT")
 public class Subject extends AbstractProfile {
 
     @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL)
-    private List<Attendance> attendances = new ArrayList<>();
+    private List<QrSession> qrSessions = new ArrayList<>();
+
 }

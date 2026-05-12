@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Users</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="subject.html">Subjects</a>
+    <a href="user.html">Users</a>
+    <a href="group.html">Groups</a>
+    <a href="attendance.html">Attendance</a>
+    <a href="qr.html">Generate QR</a>
+</div>
+
+<div class="container">
+
+    <h2>User Management</h2>
+
+    <div class="form-group">
+
+        <input
+                id="manualId"
+                placeholder="Manual ID"
+        >
+
+        <input
+                id="email"
+                placeholder="Email"
+        >
+
+        <button onclick="addUser()">
+            Add User
+        </button>
+
+    </div>
+
+    <table class="modern-table">
+
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Manual ID</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+
+        <tbody id="userList"></tbody>
+
+    </table>
+
+</div>
+
+<script src="javascript/user.js"></script>
+
+</body>
+</html>

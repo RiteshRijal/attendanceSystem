@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Generate</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="subject.html">Subjects</a>
+    <a href="user.html">Users</a>
+    <a href="group.html">Groups</a>
+    <a href="attendance.html">Attendance</a>
+    <a href="qr.html">Generate QR</a>
+</div>
+
+<div class="container">
+
+    <h2>Generate QR</h2>
+
+    <select id="qrSubject"></select>
+    <input type="date" id="qrDate">
+
+    <button onclick="generateQR()">Generate</button>
+
+    <img id="qrImage" width="200">
+
+</div>
+
+<script src="javascript/qr.js"></script>
+</body>
+</html>

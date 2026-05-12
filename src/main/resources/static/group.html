@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Groups</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="subject.html">Subjects</a>
+  <a href="user.html">Users</a>
+  <a href="group.html">Groups</a>
+  <a href="attendance.html">Attendance</a>
+  <a href="qr.html">Generate QR</a>
+</div>
+
+<div class="container">
+
+  <h2>Subject Group Mapping</h2>
+
+  <div class="form-group">
+
+    <select id="subjectSelect"
+            onchange="loadGroupUsers()">
+    </select>
+
+    <select id="userSelect"></select>
+
+    <button onclick="addGroupUser()">
+      Add User
+    </button>
+
+  </div>
+
+  <table class="modern-table">
+
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>User</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+
+    <tbody id="groupList"></tbody>
+
+  </table>
+
+</div>
+
+<script src="javascript/group.js"></script>
+
+</body>
+</html>
